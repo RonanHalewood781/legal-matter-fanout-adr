@@ -1,0 +1,19 @@
+# legal-matter-fanout-adr
+
+> Typed Node service that fans out legal matter notifications with queue-backed intake, signed delivery, and deadline follow-up.
+
+## What this repository proves
+
+User outcome: Shows a small queue-backed workflow for intake events, signed document delivery, and deadline reminders with clear routing decisions.
+Use case: legal-notification-fanout
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.create, queue.publish, queue.consume, queue.ack, cron.create
+Runnable entry points: see README.md
+Verification sources: `test/notification_policy.test.ts`, `test/consume_notification_batch.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

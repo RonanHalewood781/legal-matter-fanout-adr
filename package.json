@@ -1,0 +1,20 @@
+{
+  "name": "legal-matter-fanout-adr",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx",
+    "setup": "node --import tsx src/setup_notifications.ts",
+    "run-example": "node --import tsx src/legal_notification_demo.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
